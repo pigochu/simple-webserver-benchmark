@@ -79,9 +79,17 @@ vertx 的命令可以由專案中的 vertx/bin 中找到，可以自己設定好
     vertx run simple-webserver-benhmark/vertx-java/Server.java
 
 ## 註釋 ##
-- 註 1 : vertx 請至 [vertx 官方網站](http://vertx.io "vertx") 看看
+- 註 1 : vertx 是什請至 [vertx 官方網站](http://vertx.io "vertx") 看看
 - 註 2 : nodejs 被包在 EPEL 中，必須於系統先安裝好 EPEL 的 yum repo 支援 ，請看參見 [EPEL Wiki](http://fedoraproject.org/wiki/EPEL "EPEL Wiki")
 - 註 3 : yum 要使用 remi repo 請參考 [http://blog.famillecollet.com/pages/Config-en](http://blog.famillecollet.com/pages/Config-en)
 
 ## 相關資料參考 ##
 - PHP Event Manual : [http://www.php.net/manual/en/book.event.php](http://www.php.net/manual/en/book.event.php)
+
+##　版權 ##
+
+還不知道要用甚麼授權～總之要拿去改要保留原作者名稱就是了
+
+## 作者 ##
+
+壞蛋 Pigo
