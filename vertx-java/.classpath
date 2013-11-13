@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/hazelcast-2.6.3.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/jackson-annotations-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/jackson-core-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/jackson-databind-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/netty-all-4.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/vertx-core-2.1M1.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/vertx-hazelcast-2.1M1.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/simple-webserver-benchmark/vertx/lib/vertx-platform-2.1M1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
