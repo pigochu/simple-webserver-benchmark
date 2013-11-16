@@ -3,7 +3,8 @@ Simple Web Server Benchmark
 
 這個專案是我自己評估那一種語言，架構來寫即時通訊應用效能比較
 
-## 路徑說明 ##
+## 1. 路徑說明 ##
+- dart : 以 Dart 語言寫的測試
 - files : 存放測試用的靜態檔案
 - nodejs : 以 nodejs javascript 語言寫的測試
 - phpevent : 以 php 語言搭配 pecl-event 寫的測試
@@ -15,7 +16,7 @@ Simple Web Server Benchmark
 
 以上三種是我自己有能力來碰的範圍，所以針對三種架構(php/nodejs/vertx)寫出簡單的 http server ，並且測試其效能。
 
-## 測試環境需求 ##
+## 2. 測試環境需求 ##
 
 這些 Code 我是用下列環境測試的，其他的 Linux 版本只要別太舊應該都可以正常跑吧
 
@@ -24,24 +25,29 @@ Simple Web Server Benchmark
 - 內建的 openjdk 及 openjdk-devel (openjdk 開發套件)
 - remi 版的 php 及 pecl event
 
-## 測試環境安裝相關的套件指令 ##
+## 3. 測試環境安裝相關的套件指令 ##
 
-### nodejs 的支援 ###
+
+### 3-1. nodejs 的支援 ###
 
     yum install nodejs (註2)
 
-### php 支援 event ###
+### 3-2. php 支援 event ###
     yum --enablerepo=remi install php-pecl-event (註3)
 
-### vertx 需要 java 的支援 ###
+### 3-3. vertx 需要 java 的支援 ###
 
     yum install java-1.7.0-openjdk.x86_64 java-1.7.0-openjdk-devel.x86_64
 
-## 執行方式 ##
+### 3-4 dart 的支援 ###
 
-以下將介紹各種測試項目的執行方式，建議用 root 權限來跑，要跑各種測試前可以先執行 ulimit -a 4096 ，這樣子若用 ab 開 1000 條連線測試的時候比較不會出錯
+在 2013-11-16 以前的 dart 尚未有 CentOS 等 RHEL 類的安裝包，Dart 所提供的 Linux 版 SDK 僅能安裝在最新版 Ubuntu，故此項目我僅在 Windows 上測試過， mac 據說也沒問題，要安裝 dart 請至 [https://www.dartlang.org](https://www.dartlang.org/) 自行下載 SDK 方能測試。
 
-### phpevent ###
+## 4. 執行方式 ##
+
+以下將介紹各種測試項目的執行方式，建議用 root 權限來跑，要跑各種測試前可以先執行 ulimit -n 4096 ，這樣子若用 ab 開 1000 條連線測試的時候比較不會出錯
+
+### 4-1. phpevent ###
 
 於命令列輸入以下指令
 
@@ -62,21 +68,24 @@ Simple Web Server Benchmark
 - arrayjson : 將陣列轉為 json 並回傳以測試 json 轉換效能
 
 
-### nodejs ###
+### 4-2. nodejs ###
 
 於命令列輸入以下指令
 
     node simple-webserver-benchmark/nodejs/server.js
 
-### vertx-js ###
+### 4-3. vertx-js ###
 
 vertx 的命令可以由專案中的 vertx/bin 中找到，可以自己設定好 PATH，或自行官網下載安裝最新版
 
     vertx run simple-webserver-benchmark/vertx-js/server.js
 
-### vertx-java ###
+### 4-4. vertx-java ###
 
     vertx run simple-webserver-benhmark/vertx-java/src/Server.java
+
+### 4-5. dart ###
+    dart simple-webserver-benchmark/dart/bin/simple-webserver-benchmark.dart
 
 ## 註釋 ##
 - 註 1 : vertx 是什請至 [vertx 官方網站](http://vertx.io "vertx") 看看
